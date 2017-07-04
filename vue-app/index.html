@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Vue - 初识Vue</title>
+		<link rel="stylesheet" href="style.css">
+		<!-- CDN -->
+		<script src="https://unpkg.com/vue"></script>
+	</head>
+	<body>
+
+		<!-- 设置容器 -->
+		<div id="vue-app">
+			<h1>键盘事件</h1>
+			<label>Name:</label>
+			<input type="text" v-model="name" v-on:keyup.enter="logName">
+			<span>{{ name }}</span>
+			<label>Age:</label>
+			<input type="text" v-model="age" v-on:keyup.alt.enter="logAge">
+			<span>{{ age }}</span>
+
+		</div>
+		<!-- 逻辑文件 -->
+		<script src="app.js" charset="utf-8"></script>
+	</body>
+</html>
